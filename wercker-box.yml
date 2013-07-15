@@ -17,5 +17,6 @@ script : |
   sudo rm -rf /var/lib/riak/*
   sudo service riak start
   sudo /usr/sbin/riak-admin wait-for-service riak_kv riak@127.0.0.1
+  sudo netstat -tnpl
 init-script: |
   sudo /usr/sbin/riak-admin wait-for-service riak_kv riak@127.0.0.1
